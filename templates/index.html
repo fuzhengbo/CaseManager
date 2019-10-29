@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>app_demo</title>
+</head>
+<body>
+    <h3>网站名：{{ sitename }}</h3>
+    <h3>域名：{{ url }}</h3>
+    <div>
+        <ul>
+        <h4>所有文章：</h4>
+            {% for article in all_article  %}
+            <li>{{ article.id }} - {{ article.title }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {#新下面的代码#}
+    <div>
+        <ul>
+        <h4>Blog教程目录：</h4>
+            {% for item in list  %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div>
+        <ul>
+        <h4>Blog教程作者信息：</h4>
+            {% for k, v in mydict.items  %}
+            <li>{{ k }}：{{ v }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
